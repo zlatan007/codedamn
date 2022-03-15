@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
-import Pratice from './Components/Pratice';
+import Temp from './Components/Temp';
+import TimerLoader from './Components/TimerLoader';
+import UseEffect from './Components/UseEffect';
+import UseRef from './Components/UseRef';
+import UseState from './Components/UseState';
 import './style.css';
 
 function App() {
   return (
-    <Pratice />
+    // <UseState />
+    // <Temp />
+    // <TimerLoader />
+    // <UseEffect />
+    <UseRef />
   )
 }
 
