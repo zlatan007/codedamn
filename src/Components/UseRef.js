@@ -1,19 +1,24 @@
 import React,{useEffect, useRef} from 'react'
 
 const UseRef = () => {
-  const elementRef = useRef("ojiyhnj");
+  const elementRef1 = useRef("ojiyhnj");
+  const elementRef2 = useRef("ojiyhnj");
 
-//   useEffect(() => {
-//       console.log('Ref element', elementRef.current);
-//   })
+useEffect(() => {
+    elementRef1.current.focus();
+})
+const functiondown = (e) => {
+    console.log('shun');
+    if(e.key === 'Enter') {
+        elementRef2.current.focus();
+        console.log('ekey',e.key);
+    }
+}
 
-  const focus = () => {
-    elementRef.current.focus();
-  }
   return (
-      <>
-        <input ref={elementRef} />
-        <button onClick={focus}>Focus</button>
+      <>    
+        <input ref={elementRef1} onKeyDown={functiondown}/>
+        <input ref={elementRef2} />
       </>
     
   )
